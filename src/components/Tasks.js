@@ -1,40 +1,11 @@
-const tasks = [
-    {
-        id:1,
-        text: "Doctors Appointment",
-        day:"Feb 5th at 2:30pm",
-        reminder:true
-    },
-    {
-        id:2,
-        text: "Home Work",
-        day:"Feb 8th at 5:00pm",
-        reminder:true
-    },
-    {
-        id:3,
-        text: "Bill Payment",
-        day:"Feb 9th at 1:00pm",
-        reminder:true
-    },
-    {
-        id:4,
-        text: "Watch movie",
-        day:"Feb 10th at 8:30pm",
-        reminder:true
-    },
-    {
-        id:5,
-        text: "Running",
-        day:"Feb 12th at 8:00pm",
-        reminder:true
-    },
-]
+import Task from './Task'
 
-const Tasks = () => {
+const Tasks = ({tasks}) => {
     return (
         <>
-            { tasks.map((task, index)=>{ return (<h3 key={index}>{task.text}</h3>) }) }
+            { tasks.map((task, index)=>{ return (
+                <Task key={index} task={task} /> 
+            )}) }
         </>
     )
 }
