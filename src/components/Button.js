@@ -1,9 +1,22 @@
-const Button = () => {
+import propTypeOf from 'prop-types'
+const Button = ({bg,text,callThisOnClick}) => {
+    
     return(
         <>
-            <button className="btn">Add</button>
+            <button onClick={callThisOnClick} style={ {backgroundColor:bg} } className="btn">
+                {text}
+            </button>
         </>
     )
 }
 
-export default Button 
+Button.defaultProps = {
+    bg: "yellow",
+}
+
+Button.propTypes = {
+    bg: propTypeOf.string.isRequired,
+    callThisOnClick: propTypeOf.func
+}
+
+export default Button
