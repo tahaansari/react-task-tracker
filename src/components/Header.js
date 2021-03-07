@@ -10,8 +10,6 @@ const Header = ({title}) => {
         <header className="header">
             <h1>{title}</h1>
             <Button bg="red" text="Add" callThisOnClick={funcShow}/>
-            <Button bg="green" text="Update" />
-            <Button bg="blue" text="Delete" />
         </header>
     )
 }
