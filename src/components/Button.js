@@ -1,9 +1,9 @@
 import propTypeOf from 'prop-types'
-const Button = ({bg,text,callThisOnClick}) => {
+const Button = ({bg,text,onToggleShow}) => {
     
     return(
         <>
-            <button onClick={callThisOnClick} style={ {backgroundColor:bg} } className="btn">
+            <button onClick={onToggleShow} style={ {backgroundColor:bg} } className="btn">
                 {text}
             </button>
         </>

@@ -1,15 +1,11 @@
 import Button from "./Button";
 
-const Header = ({title}) => {
-
-    const funcShow = () => {
-        console.log("i have been called in parent component")
-    }
+const Header = ({title,onToggleShow, showForm}) => {
 
     return (
         <header className="header">
             <h1>{title}</h1>
-            <Button bg="red" text="Add" callThisOnClick={funcShow}/>
+            <Button bg={showForm ? 'red' : 'green'} text={showForm ? 'Close' : 'Add'} onToggleShow={onToggleShow}/>
         </header>
     )
 }
